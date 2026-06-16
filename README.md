@@ -35,3 +35,4 @@ MetaTrader 5 (Exness) hisobidagi savdo ma'lumotini eksport qilib, **TradeZella u
 - 📋 **Savdolar jurnali** — filtr + CSV eksport
 - 📈 **Bozor** — EURUSD candlestick + MA + volume
 - ⚙️ **Hisob** — balans, margin, leverage
+- 📅 **Kalendar** — oylik P&L kalendari; kunni bosganda o'sha kun bitimlari + statistika (TradeZella uslubida)

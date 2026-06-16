@@ -141,6 +141,29 @@ def daily_pnl(tr: pd.DataFrame) -> pd.DataFrame:
     return g
 
 
+def day_stats(day_tr: pd.DataFrame) -> dict:
+    """Bitta kun uchun statistika (kalendar dialog uchun)."""
+    if day_tr.empty:
+        return {}
+    wins = day_tr[day_tr["net"] > 0]
+    loss = day_tr[day_tr["net"] < 0]
+    gl = abs(loss["net"].sum())
+    return {
+        "trades": len(day_tr),
+        "net": day_tr["net"].sum(),
+        "gross": day_tr["profit"].sum(),
+        "winners": len(wins),
+        "losers": len(loss),
+        "win_rate": 100 * len(wins) / len(day_tr),
+        "volume": day_tr["volume"].sum(),
+        "commission": day_tr["commission"].sum(),
+        "swap": day_tr["swap"].sum(),
+        "profit_factor": (wins["net"].sum() / gl) if gl else float("inf"),
+        "best": day_tr["net"].max(),
+        "worst": day_tr["net"].min(),
+    }
+
+
 if __name__ == "__main__":
     tr = build_trades()
     print(f"Savdolar: {len(tr)}")
