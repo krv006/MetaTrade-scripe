@@ -37,7 +37,7 @@ python -m venv .venv
 Loyiha papkasida `.env` faylini yarating (yoki tahrirlang) va o'z MT5 ma'lumotlaringizni kiriting:
 
 ```env
-MT5_LOGIN=474008160
+MT5_LOGIN=login
 MT5_PASSWORD="parolingiz"
 MT5_SERVER=Exness-MT5Trial15
 MT5_PATH=C:\Program Files\MetaTrader 5\terminal64.exe
