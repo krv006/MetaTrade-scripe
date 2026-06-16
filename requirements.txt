@@ -1,0 +1,6 @@
+MetaTrader5==5.0.5735
+pandas==3.0.3
+python-dotenv==1.2.2
+plotly==6.8.0
+streamlit==1.58.0
+matplotlib==3.11.0
